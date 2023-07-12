@@ -65,7 +65,7 @@ app.post('/register', (req, res) => {
 
 db.once("open", function () {
     console.log("Database Connected Succesfully");
-    app.listen(5000, () => {
-        console.log(`The server is running on port: ${5000}`);
+    app.listen(process.env.PORT, () => {
+        console.log(`The server is running on port: ${process.env.PORT}`);
     })
 })
